@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="CSV File Import" qualified_name="Orange.widgets.data.owcsvimport.OWCSVFileImport" project_name="Orange3" version="" title="CSV File Import" position="(398.3333333333333, 322.33333333333337)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(793.8333333333335, 101.36111111111109)" />
+		<node id="2" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Select Rows" position="(-277.1111111111111, 630.4722222222222)" />
+		<node id="3" name="Data Sampler" qualified_name="Orange.widgets.data.owdatasampler.OWDataSampler" project_name="Orange3" version="" title="Data Sampler" position="(-172.08333333333337, 768.527777777778)" />
+		<node id="4" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions" position="(-1.0277777777777146, 763.6111111111109)" />
+		<node id="5" name="Distributions" qualified_name="Orange.widgets.visualize.owdistributions.OWDistributions" project_name="Orange3" version="" title="Distributions (1)" position="(494.2222222222222, 623.2777777777776)" />
+		<node id="6" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Select Rows (1)" position="(797.3333333333335, 528.1111111111111)" />
+		<node id="7" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(959.6666666666667, 526.8888888888889)" />
+		<node id="8" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(1065.6944444444448, 527.3611111111113)" />
+		<node id="9" name="Select Rows" qualified_name="Orange.widgets.data.owselectrows.OWSelectRows" project_name="Orange3" version="" title="Select Rows (2)" position="(-113.61111111111109, 244.16666666666663)" />
+		<node id="10" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot (1)" position="(-31.250000000000057, 74.0277777777778)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="2" source_node_id="2" sink_node_id="3" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="3" source_node_id="3" sink_node_id="4" source_channel="Data Sample" sink_channel="Data" enabled="true" source_channel_id="data_sample" sink_channel_id="data" />
+		<link id="4" source_node_id="2" sink_node_id="5" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="5" source_node_id="0" sink_node_id="6" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="6" source_node_id="0" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="7" source_node_id="9" sink_node_id="10" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="8" source_node_id="6" sink_node_id="7" source_channel="Matching Data" sink_channel="Data" enabled="true" source_channel_id="matching_data" sink_channel_id="data" />
+		<link id="9" source_node_id="7" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+	</links>
+	<annotations>
+		<text id="0" type="text/plain" rect="(731.8055555555557, 15.555555555555557, 461.1111111111111, 33.777777777777786)" font-family="Segoe UI" font-size="16">36) Importação e visualização inicial </text>
+		<text id="1" type="text/plain" rect="(851.9444444444443, 60.55555555555554, 336.66666666666674, 180.0)" font-family="Segoe UI" font-size="16">- Pergunta: quantas variáveis e registros aparecem? 
+
+Registros (Instances): 2075259 --&gt; número de linhas (observações) do dataset. 
+
+Variáveis (Features): 9 --&gt; número de colunas (atributos) que cada registro possui.</text>
+		<text id="2" type="text/plain" rect="(-344.1666666666667, 520.4166666666665, 150.0, 54.0)" font-family="Segoe UI" font-size="16">37) Amostragem de Dados (1%)</text>
+		<text id="3" type="text/plain" rect="(-330.1388888888889, 834.0277777777778, 554.4444444444445, 218.33333333333326)" font-family="Segoe UI" font-size="16">A distribuição de Global_active_power na amostra é semelhante à base completa? 
+
+A análise das distribuições revela que, quando Global_active_power é igual a 0, há cerca de 90.000 ocorrências no conjunto completo, e aproximadamente 9.000 na amostra de 1%. Essa proporção demonstra que a amostra reflete bem os dados originais, mantendo a mesma distribuição.</text>
+		<text id="4" type="text/plain" rect="(419.16666666666674, 521.9444444444443, 150.0, 54.0)" font-family="Segoe UI" font-size="16">38) Distribuição de Consumo</text>
+		<text id="5" type="text/plain" rect="(288.19444444444434, 681.1111111111113, 701.1111111111112, 166.22222222222194)" font-family="Segoe UI" font-size="16">O consumo é concentrado em valores baixos ou há muitos registros de alto consumo? 
+
+A distribuição da variável Global_active_power evidencia que a maior parte dos registros está concentrada em faixas de consumo baixas (entre 0 e 2 kW). Os registros com consumo mais alto são bem menos frequentes, sugerindo que esses casos são exceções.</text>
+		<text id="6" type="text/plain" rect="(-152.22222222222217, -31.527777777777786, 241.11111111111117, 63.0)" font-family="Segoe UI" font-size="16">39) Relação entre variáveis elétricas</text>
+		<text id="7" type="text/plain" rect="(33.05555555555554, 30.9722222222222, 418.8888888888889, 156.33333333333337)" font-family="Segoe UI" font-size="16">Existe correlação visível?
+
+Sim, é possível observar uma correlação clara entre Voltage e Global_intensity. Nota-se uma relação inversa: quando a voltagem está baixa, a intensidade tende a ser mais alta e variável; já em voltagens mais altas, os valores de intensidade se mostram mais concentrados e menores.</text>
+		<text id="8" type="text/plain" rect="(1105.833333333333, 419.44444444444434, 350.69444444444457, 222.0)" font-family="Segoe UI" font-size="16">Cada cluster representa um padrão distinto de consumo doméstico? 
+
+Sim, os clusters identificados representam diferentes perfis de uso de energia nas residências. O algoritmo K-Means agrupou os dados em três categorias, considerando qual dos consumos (Sub_metering_1, 2 ou 3) era predominante em cada caso, revelando padrões distintos de comportamento energético.</text>
+		<text id="9" type="text/plain" rect="(748.6111111111111, 402.91666666666674, 300.0000000000001, 54.0)" font-family="Segoe UI" font-size="16">40) Agrupamento com K-Means</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="literal">{'_session_items': [], '_session_items_v2': [], 'compatibility_mode': False, 'controlAreaVisible': True, 'dialog_state': {'directory': '', 'filter': ''}, 'savedWidgetGeometry': None, '__version__': 3}</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': None, 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'purge_attributes': False, 'purge_classes': False, 'savedWidgetGeometry': None, 'update_on_change': True, '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="3" format="literal">{'compatibility_mode': False, 'controlAreaVisible': True, 'number_of_folds': 10, 'replacement': False, 'sampleSizeNumber': 1, 'sampleSizePercentage': 70, 'sampleSizeSqlPercentage': 0.1, 'sampleSizeSqlTime': 1, 'sampling_type': 0, 'savedWidgetGeometry': None, 'selectedFold': 1, 'sql_dl': False, 'stratify': False, 'use_seed': True, '__version__': 2}</properties>
+		<properties node_id="4" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'cumulative_distr': False, 'fitted_distribution': 0, 'hide_bars': False, 'kde_smoothing': 10, 'savedWidgetGeometry': None, 'show_probs': False, 'sort_by_freq': False, 'stacked_columns': False, '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="5" format="literal">{'auto_apply': True, 'controlAreaVisible': True, 'cumulative_distr': False, 'fitted_distribution': 0, 'hide_bars': False, 'kde_smoothing': 10, 'savedWidgetGeometry': None, 'show_probs': False, 'sort_by_freq': False, 'stacked_columns': False, '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="6" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'purge_attributes': False, 'purge_classes': False, 'savedWidgetGeometry': None, 'update_on_change': True, '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="7" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 3, 'k_from': 2, 'k_to': 8, 'max_iterations': 300, 'n_init': 10, 'normalize': True, 'optimize_k': False, 'savedWidgetGeometry': None, 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="8" format="literal">{'attr_x_is_abs': False, 'attr_y_is_abs': False, 'auto_commit': True, 'auto_sample': True, 'controlAreaVisible': True, 'savedWidgetGeometry': None, 'selection': None, 'tooltip_shows_all': True, 'visual_settings': {}, 'graph': {'alpha_value': 128, 'class_density': False, 'jitter_continuous': False, 'jitter_size': 0, 'label_only_selected': False, 'orthonormal_regression': False, 'point_width': 10, 'show_ellipse': False, 'show_grid': False, 'show_legend': True, 'show_reg_line': False}, '__version__': 5, 'context_settings': []}</properties>
+		<properties node_id="9" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'purge_attributes': False, 'purge_classes': False, 'savedWidgetGeometry': None, 'update_on_change': True, '__version__': 2, 'context_settings': []}</properties>
+		<properties node_id="10" format="literal">{'attr_x_is_abs': False, 'attr_y_is_abs': False, 'auto_commit': True, 'auto_sample': True, 'controlAreaVisible': True, 'savedWidgetGeometry': None, 'selection': None, 'tooltip_shows_all': True, 'visual_settings': {}, 'graph': {'alpha_value': 128, 'class_density': False, 'jitter_continuous': False, 'jitter_size': 0, 'label_only_selected': False, 'orthonormal_regression': False, 'point_width': 10, 'show_ellipse': False, 'show_grid': False, 'show_legend': True, 'show_reg_line': False}, '__version__': 5, 'context_settings': []}</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
